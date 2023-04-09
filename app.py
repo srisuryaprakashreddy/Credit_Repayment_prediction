@@ -1,13 +1,12 @@
 import streamlit as st
-import pandas as pd
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
-from pickle import dump, load
+
 
 nav = st.sidebar.radio("Navigation",["About","Predict"])
 
 if nav=="About":
-    st.title("Health Insurance Premium Predictor")
+    st.title("Credit repayment predictor")
     st.text(" ")
     st.text(" ")
     st.image('images.png',width=600)
