@@ -5,7 +5,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 nav = st.sidebar.radio("Navigation",["About project","Predict"])
 
-if nav=="About":
+if nav=="About project":
     st.title("Credit repayment predictor")
     st.text(" ")
     st.text(" ")
