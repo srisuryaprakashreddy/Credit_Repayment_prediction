@@ -197,7 +197,7 @@ if nav=="Predict":
     st.title("Credit Repayment Predictor")
     creditpolicy='eligible'
     s=0
-    st.text("Credit poilicy of Company")
+    st.subheader("Credit poilicy of Company")
     creditpolicy = st.radio("select   ",("Eligible for the policy of the company ","noteligible for the policy of  the company"))
     
     if (creditpolicy == "Eligible for the policy of the company"):
