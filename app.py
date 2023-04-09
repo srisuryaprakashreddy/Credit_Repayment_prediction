@@ -40,6 +40,28 @@ if nav=="About the project":
     st.subheader("Dataset Used")
     df=pd.read_csv("loan_data.csv")
     st.dataframe(df)
+    st.subheader("feature selection")
+    st.text("""selected fetures are """)
+    st.code("""
+credit.policy                 0.0
+int.rate                      0.0
+log.annual.inc                0.0
+dti                           0.0
+fico                          0.0
+revol.util                    0.0
+inq.last.6mths                0.0
+delinq.2yrs                   0.0
+pub.rec                       0.0
+not.fully.paid                0.0
+purpose_credit_card           0.0
+purpose_debt_consolidation    0.0
+purpose_educational           0.0
+purpose_home_improvement      0.0
+purpose_major_purchase        0.0
+purpose_small_business        0.0""")
+    st.text("""from the above features not.fully.paid selected as target variable
+     and remaining features are selected as independent features """)
+
     st.subheader("Preliminary Design")
     st.text("""
 
@@ -66,23 +88,7 @@ if nav=="About the project":
     7.Prediction or Inference: Finally, once you have trained and
     evaluated your model, you can use it to make predictions or 
     perform inference on new data. """)
-    st.code("""credit.policy                 0.0
-int.rate                      0.0
-log.annual.inc                0.0
-dti                           0.0
-fico                          0.0
-revol.util                    0.0
-inq.last.6mths                0.0
-delinq.2yrs                   0.0
-pub.rec                       0.0
-not.fully.paid                0.0
-purpose_credit_card           0.0
-purpose_debt_consolidation    0.0
-purpose_educational           0.0
-purpose_home_improvement      0.0
-purpose_major_purchase        0.0
-purpose_small_business        0.0""")
-
+   
    
 
 if nav=="Predict":
