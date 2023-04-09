@@ -13,29 +13,19 @@ if nav=="About the project":
     st.title("Predicting Loan Defaults using Deep Learning with Keras & Tensorflow")
     st.subheader("Problem Statement:")
     st.text(
-    """    Credit scoring is a statistical analysis performed by 
-    lenders and financial institutions to determine the 
-    ability of a person or a small, owner-operated business
-    to repay. Lenders use credit scoring to help decide 
-    whether to  extend or deny credit as for any organization,
-    even the slightest chance of financial risk can not be 
-    ignored or ruled out. The objective of this challenge 
-    is to create a robust machine-learning model to predict 
-    which individuals are most likely to default on their loans,
-    based on theirhistorical loan repayment behavior and 
+    """    Credit scoring is a statistical analysis performed by lenders and financial institutions to determine the 
+    ability of a person or a small, owner-operated business to repay. Lenders use credit scoring to help decide 
+    whether to  extend or deny credit as for any organization,even the slightest chance of financial risk can not be 
+    ignored or ruled out. The objective of this challenge is to create a robust machine-learning model to predict 
+    which individuals are most likely to default on their loans,based on theirhistorical loan repayment behavior and 
     transactional activities. """)
     st.subheader("introduction")
     st.text(""" 
-      Credit scoring is a crucial tool used by lenders and 
-      financial institutions to assess the ability of
-      individuals or small businesses to repay loans. 
-      By analyzing historical loan repayment behavior and 
-      transactional activities, lenders can make informed 
-      decisions about extending or denying credit. In this 
-      project, our objective is to create a robust machine 
-      learning model that can accurately predict the likelihood
-      of loan default. By doing so, we aim to help lenders
-      minimize financial risk and make more informed decisions 
+      Credit scoring is a crucial tool used by lenders and financial institutions to assess the ability of
+      individuals or small businesses to repay loans. By analyzing historical loan repayment behavior and 
+      transactional activities, lenders can make informed decisions about extending or denying credit. In this 
+      project, our objective is to create a robust machine learning model that can accurately predict the likelihood
+      of loan default. By doing so, we aim to help lenders minimize financial risk and make more informed decisions 
       about extending credit.""")
     st.subheader("Dataset Used")
     df=pd.read_csv("loan_data.csv")
@@ -65,29 +55,22 @@ if nav=="About the project":
     st.subheader("Preliminary Design")
     st.text("""
 
-    1.Collect Data: Given the problem you want to solve, 
-    you will have to investigate and obtain data that you 
+    1.Collect Data: Given the problem you want to solve,you will have to investigate and obtain data that you 
     will use to feed your machine.
 
-    2.Prepare the data: Once you have collected your data,
-    you will need to prepare it for use in your model.
+    2.Prepare the data: Once you have collected your data,you will need to prepare it for use in your model.
     
-    3.Choose the model: There are many different types of 
-    models that you can use for deep learning, and you will
+    3.Choose the model: There are many different types of models that you can use for deep learning, and you will
     need to choose the one that is best suited for your problem.
     
-    4.Train your machine model: Once you have chosen your model,
-    you will need to train it using your prepared data.
+    4.Train your machine model: Once you have chosen your model,you will need to train it using your prepared data.
     
-    5.Evaluation: After training your model, you will need to 
-    evaluate its performance.
+    5.Evaluation: After training your model, you will need to evaluate its performance.
     
-    6.Parameter Tuning: You may need to adjust the parameters of
-    your model to improve its performance.
+    6.Parameter Tuning: You may need to adjust the parameters of your model to improve its performance.
     
-    7.Prediction or Inference: Finally, once you have trained and
-    evaluated your model, you can use it to make predictions or 
-    perform inference on new data. """)
+    7.Prediction or Inference: Finally, once you have trained and evaluated your model, you can use it to make predictions
+     or perform inference on new data. """)
     st.subheader("how to use the deployed model ")
     st.text("select prediction in teh side slide bar ")
     st.code(""" 
@@ -111,18 +94,13 @@ if nav=="About the project":
 
     st.subheader("Process of Deployment")
     st.text("""   
-    I used Streamlit, a popular open-source framework, 
-    to deploy my machine learning models and data science projects. 
-    t was free of cost and purely in Python. I deployed my Streamlit 
-    app on Streamlit Community Cloud which let me deploy my app in 
-    just one click.
+    I used Streamlit, a popular open-source framework, to deploy my machine learning models and data science projects. 
+    t was free of cost and purely in Python. I deployed my Streamlit app on Streamlit Community Cloud which let me
+    deploy my app in just one click.
 
-    To deploy my app on Streamlit Community Cloud, 
-    I added my app code and dependencies to a GitHub repo.
-    Streamlit Community Cloud launched my app directly from 
-    my GitHub repo. Then, I clicked “New app” from the upper 
-    right corner of my workspace, filled in my repo, branch, 
-    and file path, and clicked “Deploy”.""")
+    To deploy my app on Streamlit Community Cloud,I added my app code and dependencies to a GitHub repo.
+    Streamlit Community Cloud launched my app directly from my GitHub repo. Then, I clicked “New app” from the upper 
+    right corner of my workspace, filled in my repo, branch,and file path, and clicked “Deploy”.""")
     st.subheader("streamlit code:-")
     st.code("""if nav=="Predict":
     st.title("Enter Details")
