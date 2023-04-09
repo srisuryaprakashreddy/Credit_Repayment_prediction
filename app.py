@@ -36,15 +36,15 @@ if nav=="About the project":
     st.subheader("feature selection")
     st.text("""selected fetures are """)
     st.code("""
-            credit.policy                 
-            int.rate                      
-            log.annual.inc                
-            dti                           
-            fico                          
-            revol.util                    
-            inq.last.6mths                
-            delinq.2yrs                   
-            pub.rec                       
+            credit.policy      if the customer meets the credit underwriting criteria of LendingClub.com, and “0” otherwise            
+            int.rate           The interest rate of the loan, as a proportion (a rate of 11% would be stored as 0.11). Borrowers judged by LendingClub.com to be riskier are assigned higher interest rates.            
+            log.annual.inc     The natural log of the self-reported annual income of the borrower.
+            dti                The debt-to-income ratio of the borrower (=amount of debt / annual income).           
+            fico               The FICO credit score of the borrower.           
+            revol.util         The borrower’s revolving line utilization rate (the amount of the credit line used relative to total credit available).           
+            inq.last.6mths     The borrower’s number of inquiries by creditors in the last 6 months.           
+            delinq.2yrs        The number of times the borrower had been 30+ days past due on a payment in the past 2 years.           
+            pub.rec            The borrower’s number of derogatory public records (bankruptcy filings, tax liens, or judgments).           
             not.fully.paid                
             purpose_credit_card           
             purpose_debt_consolidation    
@@ -78,7 +78,7 @@ if nav=="About the project":
     7.Prediction or Inference: Finally, once you have trained and evaluated your model,
       you can use it to make predictions or perform inference on new data. """)
     st.subheader("how to use the deployed model ")
-    st.text("select prediction in teh side slide bar ")
+    st.text("select prediction in the side slide bar ")
     st.code(""" 
             credit.policy                 
             int.rate                      
