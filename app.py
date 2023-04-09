@@ -88,6 +88,20 @@ purpose_small_business        0.0""")
     7.Prediction or Inference: Finally, once you have trained and
     evaluated your model, you can use it to make predictions or 
     perform inference on new data. """)
+
+    st.subheader("Process of Deployment")
+    st.text("""I used Streamlit, a popular open-source framework, 
+    to deploy my machine learning models and data science projects. 
+    t was free of cost and purely in Python. I deployed my Streamlit 
+    app on Streamlit Community Cloud which let me deploy my app in 
+    just one click.
+
+    To deploy my app on Streamlit Community Cloud, 
+    I added my app code and dependencies to a GitHub repo.
+    Streamlit Community Cloud launched my app directly from 
+    my GitHub repo. Then, I clicked “New app” from the upper 
+    right corner of my workspace, filled in my repo, branch, 
+    and file path, and clicked “Deploy”.""")
    
    
 
