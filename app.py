@@ -134,7 +134,7 @@ model.compile(
     
     4.Train your machine model: Once you have chosen your model,you will need to 
     train it using your prepared data.""")
-    ST.CODE("""
+    st.code("""
     early_stop = EarlyStopping(
         monitor='val_loss', 
         mode='min', 
