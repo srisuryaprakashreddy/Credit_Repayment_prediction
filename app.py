@@ -272,6 +272,6 @@ if nav=="Predict":
         a=new_model.predict(data[[0]])
         st.text(a)
     if a > 0.5:
-        st.text("can calim loan")
+        st.text("eligible for  loan")
     else:
-        st.text("cannot claim loan")
+        st.text("not eligible for loan")
