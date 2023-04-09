@@ -27,7 +27,25 @@ if nav=="About the project":
     st.subheader("Dataset Used")
     df=pd.read_csv("loan_data.csv")
     st.dataframe(df)
-    st.text(" ")
+    st.subheader("Steps followed to build the model")
+    st.text("""
+    1.Collect Data: Given the problem you want to solve, 
+    you will have to investigate and obtain data that you 
+    will use to feed your machine.
+    2.Prepare the data: Once you have collected your data,
+    you will need to prepare it for use in your model.
+    3.Choose the model: There are many different types of 
+    models that you can use for deep learning, and you will
+    need to choose the one that is best suited for your problem.
+    4.Train your machine model: Once you have chosen your model,
+    you will need to train it using your prepared data.
+    5.Evaluation: After training your model, you will need to 
+    evaluate its performance.
+    6.Parameter Tuning: You may need to adjust the parameters of
+    your model to improve its performance.
+    7.Prediction or Inference: Finally, once you have trained and
+    evaluated your model, you can use it to make predictions or 
+    perform inference on new data. """)
     st.image('images.png',width=600)
 
 if nav=="Predict":
