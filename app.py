@@ -83,9 +83,7 @@ if nav=="Predict":
     scaler = MinMaxScaler()
     data = scaler.fit_transform(data)
     
-    later_scaler = load(open('scaler.pkl', 'rb'))
-    later_model = load_model('my_model_lending_club.h5')
-    
+     
 
     if st.button("Predict"):
         st.subheader("Predicted that :")
