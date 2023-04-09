@@ -194,26 +194,27 @@ if nav=="About the project":
    
 
 if nav=="Predict":
-    st.title("Enter Details")
+    st.title("Credit Repayment Predictor")
     creditpolicy='eligible'
     s=0
+    st.text("Credit poilicy of Company")
+    creditpolicy = st.radio("select   ",("eligible ","noteligible"))
     
-    creditpolicy = st.radio("Credit policy of the company  ",("eligible ","noteligible"))
-    
-    if (creditpolicy == "eligible"):
+    if (creditpolicy == "Eligible for the policy of the company"):
         s=0
-    if (creditpolicy == "noteligible"):
+    if (creditpolicy == "noteligible for the policy of  the company"):
         s=1
     st.text(s)
+    st.subheader("intrest Rate")
 
-    intrestrate=st.slider("the intrest rate is ",0,130,11)
+    intrestrate=st.slider("Select Intrest",0,130,11)
     st.text(intrestrate)
 
     
-
+    st.subheader("Anual Income")
     anuualincome=st.number_input("annual income",step=1,min_value=  1000)
     st.text(anuualincome)
-
+    st.subheader("Anual Expenses")
     annualexpenses=st.number_input("enter his expenses",step=1,min_value=  100)
     st.text(annualexpenses)
     
@@ -221,22 +222,22 @@ if nav=="Predict":
         
     st.subheader("the debt-income-ratio : ")
     st.text(b)
-
-    fibe=st.number_input("eneter the fibe credit score of the person ",step=1,min_value=450)
+    st.subheader("Credit score with reapective to the company")
+    fibe=st.number_input(" ",step=1,min_value=450)
     
    
-    
-    revolbal=st.number_input("The borrower’s revolving balance The borrower’s revolving balance",step=1,min_value=100)
-    
-    revolutil=st.number_input("The borrower’s revolving line utilization rate (the amount of the credit line used relative to total credit available).",step=1,min_value=100)
-    
+    st.subheader("Revolving Balance")
+    revolbal=st.number_input(" ",step=1,min_value=100)
+    st.subheader("Revolving Utilities")
+    revolutil=st.number_input("the amount of the credit line used relative to total credit available",step=1,min_value=100)
+    st.subheader("Enquiries")
     inquirey=st.number_input("number of credit equenqiries in past 6 months",step=1,min_value=2)
-    
+    st.subheader("deling")
     delinq=st.number_input("The number of times the borrower had been 30+ days past due on a payment in the past 2 years.",step=1,min_value=2)
-    
+    st.subheader("Public Records")
     pubicimage=st.number_input("The borrower’s number of derogatory public records (bankruptcy filings, tax liens, or judgments).",step=1,min_value=1)
-
-    purpose=st.radio("purpose of loan ",('credit_card',"debit_consolidation",'educational','home_improvement','major_purchase','small_bussiness'))
+    st.subheader("Purpose of loan")
+    purpose=st.radio(" ",('credit_card',"debit_consolidation",'educational','home_improvement','major_purchase','small_bussiness'))
     
     st.text(purpose)
     credit_card=0
