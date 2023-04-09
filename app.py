@@ -90,7 +90,8 @@ purpose_small_business        0.0""")
     perform inference on new data. """)
 
     st.subheader("Process of Deployment")
-    st.text("""I used Streamlit, a popular open-source framework, 
+    st.text("""   
+    I used Streamlit, a popular open-source framework, 
     to deploy my machine learning models and data science projects. 
     t was free of cost and purely in Python. I deployed my Streamlit 
     app on Streamlit Community Cloud which let me deploy my app in 
