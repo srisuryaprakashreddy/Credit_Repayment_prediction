@@ -67,7 +67,8 @@ if nav=="About the project":
     st.text("""
     
     3.Choose the model: There are many different types of models that you can use 
-    for deep learning, and you will need to choose the one that is best suited for your problem.""")
+    for deep learning, and you will need to choose the one that is best suited 
+    for your problem.""")
     st.text("""
     
     4.Train your machine model: Once you have chosen your model,you will need to 
