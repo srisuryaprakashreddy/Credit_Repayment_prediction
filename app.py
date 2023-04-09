@@ -212,15 +212,15 @@ if nav=="Predict":
 
     
     st.subheader("Anual Income")
-    anuualincome=st.number_input("annual income",step=1,min_value=  1000)
+    anuualincome=st.number_input("Annual Income",step=1,min_value=  1000)
     st.text(anuualincome)
     st.subheader("Anual Expenses")
-    annualexpenses=st.number_input("enter his expenses",step=1,min_value=  100)
+    annualexpenses=st.number_input("Enter Expenses",step=1,min_value=  100)
     st.text(annualexpenses)
     
     b=(annualexpenses/anuualincome)
         
-    st.subheader("the debt-income-ratio : ")
+    st.subheader("The Debt-Income-Ratio : ")
     st.text(b)
     st.subheader("Credit score with reapective to the company")
     fibe=st.number_input(" ",step=1,min_value=450)
