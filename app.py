@@ -24,10 +24,23 @@ if nav=="About the project":
     which individuals are most likely to default on their loans,
     based on theirhistorical loan repayment behavior and 
     transactional activities. """)
+    st.subheader("introduction")
+    st.text(""" 
+      Credit scoring is a crucial tool used by lenders and 
+      financial institutions to assess the ability of
+      individuals or small businesses to repay loans. 
+      By analyzing historical loan repayment behavior and 
+      transactional activities, lenders can make informed 
+      decisions about extending or denying credit. In this 
+      project, our objective is to create a robust machine 
+      learning model that can accurately predict the likelihood
+      of loan default. By doing so, we aim to help lenders
+      minimize financial risk and make more informed decisions 
+      about extending credit.""")
     st.subheader("Dataset Used")
     df=pd.read_csv("loan_data.csv")
     st.dataframe(df)
-    st.subheader("Steps followed to build the model")
+    st.subheader("Preliminary Design")
     st.text("""
 
     1.Collect Data: Given the problem you want to solve, 
@@ -53,6 +66,8 @@ if nav=="About the project":
     7.Prediction or Inference: Finally, once you have trained and
     evaluated your model, you can use it to make predictions or 
     perform inference on new data. """)
+
+
    
 
 if nav=="Predict":
