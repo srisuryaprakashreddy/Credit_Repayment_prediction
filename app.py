@@ -59,21 +59,26 @@ if nav=="About the project":
     st.text("""
 
     1.Collect Data: Given the problem you want to solve,you will have to investigate 
-    and obtain data that you will use to feed your machine.
+    and obtain data that you will use to feed your machine.""")
+    st.text("""
 
     2.Prepare the data: Once you have collected your data,you will need to prepare 
-    it for use in your model.
+    it for use in your model.""")
+    st.text("""
     
     3.Choose the model: There are many different types of models that you can use 
-    for deep learning, and you will need to choose the one that is best suited for your problem.
+    for deep learning, and you will need to choose the one that is best suited for your problem.""")
+    st.text("""
     
     4.Train your machine model: Once you have chosen your model,you will need to 
-    train it using your prepared data.
-    
-    5.Evaluation: After training your model, you will need to evaluate its performance.
+    train it using your prepared data.""")
+    st.text("""
+    5.Evaluation: After training your model, you will need to evaluate its performance.""")
+    st.text("""
     
     6.Parameter Tuning: You may need to adjust the parameters of your model to improve
-      its performance.
+      its performance.""")
+    st.text("""
     
     7.Prediction or Inference: Finally, once you have trained and evaluated your model,
       you can use it to make predictions or perform inference on new data. """)
