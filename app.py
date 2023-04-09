@@ -59,7 +59,7 @@ purpose_educational           0.0
 purpose_home_improvement      0.0
 purpose_major_purchase        0.0
 purpose_small_business        0.0""")
-    st.text("""from the above features not.fully.paid selected as target variable
+    st.text("""from the above features "not.fully.paid selected" as target variable
      and remaining features are selected as independent features """)
 
     st.subheader("Preliminary Design")
