@@ -3,13 +3,13 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 
 
-nav = st.sidebar.radio("Navigation",["About","Predict"])
+nav = st.sidebar.radio("Navigation",["About project","Predict"])
 
 if nav=="About":
     st.title("Credit repayment predictor")
     st.text(" ")
     st.text(" ")
-    st.image('images.png',width=600)
+    st.image('images.jpg',width=600)
 
 if nav=="Predict":
     st.title("Enter Details")
