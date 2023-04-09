@@ -53,7 +53,7 @@ if nav=="About the project":
     7.Prediction or Inference: Finally, once you have trained and
     evaluated your model, you can use it to make predictions or 
     perform inference on new data. """)
-    st.image('images.png',width=600)
+   
 
 if nav=="Predict":
     st.title("Enter Details")
