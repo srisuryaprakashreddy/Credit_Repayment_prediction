@@ -1,15 +1,34 @@
 import streamlit as st
+import pandas as pd
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 
+import pandas as pd
 
-nav = st.sidebar.radio("Navigation",["About project","Predict"])
 
-if nav=="About project":
-    st.title("Credit repayment predictor")
+
+nav = st.sidebar.radio("Navigation",["About the project","Predict"])
+
+if nav=="About the project":
+    st.title("Predicting Loan Defaults using Deep Learning with Keras & Tensorflow")
+    st.subheader("Problem Statement:")
+    st.text(
+    """    Credit scoring is a statistical analysis performed by 
+    lenders and financial institutions to determine the 
+    ability of a person or a small, owner-operated business
+    to repay. Lenders use credit scoring to help decide 
+    whether to  extend or deny credit as for any organization,
+    even the slightest chance of financial risk can not be 
+    ignored or ruled out. The objective of this challenge 
+    is to create a robust machine-learning model to predict 
+    which individuals are most likely to default on their loans,
+    based on theirhistorical loan repayment behavior and 
+    transactional activities. """)
+    st.subheader("Dataset Used")
+    df=pd.read_csv("loan_data.csv")
+    st.dataframe(df)
     st.text(" ")
-    st.text(" ")
-    st.image('image.jpg',width=600)
+    st.image('images.png',width=600)
 
 if nav=="Predict":
     st.title("Enter Details")
@@ -27,8 +46,7 @@ if nav=="Predict":
     intrestrate=st.slider("the intrest rate is ",0,130,11)
     st.text(intrestrate)
 
-    # installments= st.number_input("installement plan to repay the loan in nomber of instalemets ",step=1,min_value=0)
-    # st.text(installments)
+    
 
     anuualincome=st.number_input("annual income",step=1,min_value=  1000)
     st.text(anuualincome)
@@ -43,7 +61,7 @@ if nav=="Predict":
 
     fibe=st.number_input("eneter the fibe credit score of the person ",step=1,min_value=450)
     
-    # creditline=st.number_input("number of days with credit line",step=1,min_value=0)
+   
     
     revolbal=st.number_input("The borrower’s revolving balance The borrower’s revolving balance",step=1,min_value=100)
     
@@ -82,12 +100,10 @@ if nav=="Predict":
           [1,0.2164,14.52835448,29.96,827,119.0,33,13,5,1,1,1,1,1,1],[0,0.06,7.547501683,0.0,612,0.0,0,0,0,0,0,0,0,0,0]]
     scaler = MinMaxScaler()
     data = scaler.fit_transform(data)
-    a =0.5
-     
-
+    
     if st.button("Predict"):
         st.subheader("Predicted that :")
-       
+        a =0.5
         a=new_model.predict(data[[0]])
         st.text(a)
     if a > 0.5:
