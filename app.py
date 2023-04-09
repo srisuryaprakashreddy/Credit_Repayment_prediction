@@ -60,28 +60,108 @@ if nav=="About the project":
 
     1.Collect Data: Given the problem you want to solve,you will have to investigate 
     and obtain data that you will use to feed your machine.""")
+    st.code(""" # import libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+from tensorflow.keras.models import Sequential1
+from tensorflow.keras.layers import Dense,Dropout
+from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.models import load_model
+from sklearn.metrics import confusion_matrix, classification_report
+from pickle import dump, load
+
+%matplotlib inline
+df = pd.read_csv('loan_data.csv')
+""")
     st.text("""
 
     2.Prepare the data: Once you have collected your data,you will need to prepare 
     it for use in your model.""")
+    st.code(""" 
+    df_0 = df[df['not.fully.paid'] == 0]
+    df_1 = df[df['not.fully.paid'] == 1]
+    df_1_over = df_1.sample(count_class_0, replace=True)
+    df_test_over = pd.concat([df_0, df_1_over], axis=0)
+    final_data = pd.get_dummies(df_test_over,columns=cat_feats,drop_first=True)
+    to_drop2 = ['revol.bal', 'days.with.cr.line', 'installment', 'revol.bal']
+    final_data.drop(to_drop2, axis=1, inplace=True)
+    to_train = final_data[final_data['not.fully.paid'].isin([0,1])]
+to_pred = final_data[final_data['not.fully.paid'] == 2]
+X = to_train.drop('not.fully.paid', axis=1).values
+y = to_train['not.fully.paid'].values
+
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state = 101)
+    scaler = MinMaxScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+    """)
     st.text("""
     
     3.Choose the model: There are many different types of models that you can use 
     for deep learning, and you will need to choose the one that is best suited 
     for your problem.""")
+    st.code(""" model = Sequential()
+
+model.add(
+        Dense(94, activation='relu')
+)
+
+model.add(
+        Dense(30, activation='relu')
+)
+
+model.add(
+        Dense(15, activation='relu')
+)
+
+
+model.add(
+        Dense(1, activation='sigmoid')
+)
+
+model.compile(
+        optimizer='adam', 
+        loss='binary_crossentropy', 
+        metrics=['accuracy']
+)
+""")
     st.text("""
     
     4.Train your machine model: Once you have chosen your model,you will need to 
     train it using your prepared data.""")
+    ST.CODE("""
+    early_stop = EarlyStopping(
+        monitor='val_loss', 
+        mode='min', 
+        verbose=1, 
+        patience=25
+)
+
+model.fit(
+        X_train, 
+        y_train, 
+        epochs=200, 
+        batch_size=256, 
+        validation_data=(X_test, y_test),
+         callbacks=[early_stop]
+)""")
     st.text("""
     5.Evaluation: After training your model, you will need to evaluate its performance.""")
+    st.code(""" predictions_new = (model_new.predict(X_test) >= 0.2).astype('int')
+
+print(
+        confusion_matrix(y_test,predictions_new), 
+        '\n', 
+        classification_report(y_test,predictions_new)
+)""")
     st.text("""
     
-    6.Parameter Tuning: You may need to adjust the parameters of your model to improve
-      its performance.""")
-    st.text("""
-    
-    7.Prediction or Inference: Finally, once you have trained and evaluated your model,
+    6.Prediction or Inference: Finally, once you have trained and evaluated your model,
       you can use it to make predictions or perform inference on new data. """)
     st.subheader("how to use the deployed model ")
     st.text("select prediction in the side slide bar ")
