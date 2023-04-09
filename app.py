@@ -100,10 +100,11 @@ if nav=="Predict":
           [1,0.2164,14.52835448,29.96,827,119.0,33,13,5,1,1,1,1,1,1],[0,0.06,7.547501683,0.0,612,0.0,0,0,0,0,0,0,0,0,0]]
     scaler = MinMaxScaler()
     data = scaler.fit_transform(data)
+    a =0.5
     
     if st.button("Predict"):
         st.subheader("Predicted that :")
-        a =0.5
+        
         a=new_model.predict(data[[0]])
         st.text(a)
     if a > 0.5:
