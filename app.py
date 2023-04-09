@@ -9,7 +9,7 @@ if nav=="About":
     st.title("Credit repayment predictor")
     st.text(" ")
     st.text(" ")
-    st.image('images.jpg',width=600)
+    st.image('image.jpg',width=600)
 
 if nav=="Predict":
     st.title("Enter Details")
