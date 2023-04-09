@@ -89,6 +89,7 @@ if nav=="About the project":
     evaluated your model, you can use it to make predictions or 
     perform inference on new data. """)
     st.subheader("how to use the deployed model ")
+    st.text("select prediction in teh side slide bar ")
     st.code(""" 
             credit.policy                 
             int.rate                      
